@@ -1,0 +1,392 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap");
+@import '../../node_modules/animate.css/animate.css';
+html {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "League Spartan", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: -0.33px;
+  color: hsl(0, 0%, 63%);
+}
+
+nav {
+  height: 18px;
+  z-index: 1;
+  position: absolute;
+  top: 60px;
+  left: 65px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  color: hsl(0, 0%, 100%);
+  font-size: 1rem;
+  font-weight: 600;
+}
+nav #nav-brand #mobile-menu {
+  display: none;
+}
+nav #nav-brand #logo {
+  margin-right: 2.5rem;
+}
+nav #menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+nav #menu #mobile-close {
+  display: none;
+}
+nav #menu .menu-item {
+  padding: 0rem 1rem;
+  text-transform: lowercase;
+}
+nav #menu .menu-item hr {
+  display: none;
+}
+nav #menu .menu-item:hover {
+  cursor: pointer;
+}
+nav #menu .menu-item:hover hr {
+  display: block;
+  text-align: center;
+  width: 20px;
+  color: hsl(0, 0%, 100%);
+  border: 1px solid hsl(0, 0%, 100%);
+}
+
+#mobile-overlay {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+}
+main #top {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+main #top .disabled {
+  display: none;
+}
+main #top #carousel {
+  grid-column: 1/span 3;
+}
+main #top #carousel div {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+main #top #carousel #slide-1 {
+  background-image: url("../images/desktop-image-hero-1.jpg");
+}
+main #top #carousel #slide-2 {
+  background-image: url("../images/desktop-image-hero-2.jpg");
+}
+main #top #carousel #slide-3 {
+  background-image: url("../images/desktop-image-hero-3.jpg");
+}
+main #top #right-section {
+  grid-column: 4/span 2;
+  align-self: end;
+}
+main #top #right-section #copy-carousel .slide h1 {
+  padding: 0rem 5rem;
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -2px;
+  color: hsl(0, 0%, 0%);
+  margin-bottom: 18px;
+  margin-top: 0px;
+}
+main #top #right-section #copy-carousel .slide p {
+  margin-bottom: 2.5rem;
+  padding: 0rem 4rem 0rem 5rem;
+}
+main #top #right-section #copy-carousel .slide a {
+  padding-left: 5rem;
+  color: hsl(0, 0%, 0%);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1rem;
+  letter-spacing: 12.5px;
+  text-transform: uppercase;
+}
+main #top #right-section #copy-carousel .slide a:hover {
+  cursor: pointer;
+  color: hsl(0, 0%, 63%);
+}
+main #top #right-section #copy-carousel .slide a:hover svg > path {
+  fill: hsl(0, 0%, 63%);
+}
+main #top #right-section #carousel-controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 80px;
+  width: 160px;
+  margin-top: 5rem;
+}
+main #top #right-section #carousel-controls div {
+  background-color: hsl(0, 0%, 0%);
+  width: 80px;
+  height: 80px;
+}
+main #top #right-section #carousel-controls div img {
+  padding: 1.75rem 2rem;
+}
+main #top #right-section #carousel-controls div:hover {
+  cursor: pointer;
+  background-color: hsl(0, 0%, 27%);
+}
+main #bottom {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr 1.5fr;
+}
+main #bottom div {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+main #bottom #bottom-left {
+  background-image: url("../images/image-about-dark.jpg");
+}
+main #bottom #bottom-right {
+  background-image: url("../images/image-about-light.jpg");
+}
+main #bottom #bottom-mid {
+  width: auto;
+  height: auto;
+  text-align: justify;
+  padding-top: 2rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+main #bottom #bottom-mid h2 {
+  padding: 0px;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 6.66px;
+  color: hsl(0, 0%, 0%);
+  text-transform: uppercase;
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background-color: hsl(0, 0%, 27%);
+  color: hsl(0, 0%, 100%);
+  padding: 0.5rem 0rem;
+}
+footer a {
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+}
+footer a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 600px) {
+  #container {
+    height: auto;
+  }
+  nav {
+    top: 0px;
+    left: 0px;
+    flex-direction: column;
+    width: 100%;
+    height: 7rem;
+    font-size: 14px;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+  }
+  nav #nav-brand {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  nav #nav-brand #mobile-menu {
+    display: block;
+    padding-left: 1.5rem;
+  }
+  nav #nav-brand #mobile-menu img:hover {
+    cursor: pointer;
+  }
+  nav #nav-brand #logo {
+    padding-left: 7rem;
+    margin-right: 0rem;
+  }
+  nav #nav-brand.hide {
+    height: 0%;
+    align-items: flex-end;
+  }
+  nav #menu {
+    width: 100%;
+    height: 0%;
+    color: hsl(0, 0%, 0%);
+  }
+  nav #menu #mobile-close {
+    display: block;
+    padding: 0rem 4rem 0rem 1rem;
+  }
+  nav #menu #mobile-close img:hover {
+    cursor: pointer;
+  }
+  nav #menu .menu-item:hover hr {
+    color: hsl(0, 0%, 0%);
+    border-color: hsl(0, 0%, 0%);
+  }
+  nav #menu.show {
+    animation: moveIn 0.5s ease-out forwards;
+    position: absolute;
+    align-items: center;
+    top: 0;
+    left: 0;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  main #top {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  main #top #carousel div {
+    height: 22.5rem;
+  }
+  main #top #carousel #slide-1 {
+    background-image: url("../images/mobile-image-hero-1.jpg");
+  }
+  main #top #carousel #slide-2 {
+    background-image: url("../images/mobile-image-hero-2.jpg");
+  }
+  main #top #carousel #slide-3 {
+    background-image: url("../images/mobile-image-hero-3.jpg");
+  }
+  main #top #right-section #copy-carousel .slide {
+    padding: 4rem 2rem;
+  }
+  main #top #right-section #copy-carousel .slide h1 {
+    font-size: 2.5rem;
+    letter-spacing: -1.66px;
+    margin-bottom: 16px;
+    padding: 0rem;
+  }
+  main #top #right-section #copy-carousel .slide p {
+    margin-bottom: 3.5rem;
+    padding: 0rem;
+  }
+  main #top #right-section #copy-carousel .slide a {
+    padding-left: 0rem;
+  }
+  main #top #right-section #carousel-controls {
+    margin-top: 0rem;
+    position: absolute;
+    top: 304px;
+    right: 0px;
+    height: 56px;
+    width: 112px;
+  }
+  main #top #right-section #carousel-controls div {
+    width: 56px;
+    height: 56px;
+  }
+  main #top #right-section #carousel-controls div img {
+    padding: 1.1rem 1.3rem;
+  }
+  main #bottom {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  main #bottom #bottom-left {
+    height: 18rem;
+  }
+  main #bottom #bottom-right {
+    height: 18rem;
+  }
+  main #bottom #bottom-mid {
+    padding: 3rem 2rem;
+  }
+  main #bottom #bottom-mid h2 {
+    font-size: 14px;
+    letter-spacing: 5.83px;
+  }
+  #mobile-overlay {
+    height: auto;
+    transition: 0.5s ease-in-out;
+  }
+  #mobile-overlay.layer {
+    background-color: hsla(0, 0%, 0%, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.75;
+    z-index: 1;
+    pointer-events: none;
+  }
+  footer {
+    font-size: 12px;
+  }
+}
+@keyframes moveIn {
+  0% {
+    height: 25%;
+  }
+  50% {
+    height: 50%;
+  }
+  75% {
+    height: 75%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

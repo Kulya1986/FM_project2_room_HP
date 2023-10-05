@@ -1,0 +1,449 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap');
+@import 'variables';
+@import '../../node_modules/animate.css/animate.css';
+
+html{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: $project-font;
+    font-size: $p-size;
+    font-style: normal;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+#container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    font-size: $p-size;
+    font-weight: $weight-normal;
+    line-height: 22px;
+    letter-spacing: -0.33px;
+    color: $project-light-gray;
+}
+
+nav{
+    height: 18px;
+    z-index: 1;
+    position: absolute;
+    top: 60px;
+    left:65px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    color: $project-white;
+    font-size: $p-size;
+    font-weight: $weight-bolder;
+    #nav-brand{
+        #mobile-menu{
+            display: none;
+        }
+    
+        #logo{
+            margin-right: 2.5rem;
+        }
+    }
+
+    #menu{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+
+        #mobile-close{
+            display: none;
+        }
+        .menu-item{
+            padding: 0rem 1rem;
+            text-transform: lowercase;
+    
+            hr{
+                display: none;
+            }
+        }
+        .menu-item:hover{
+            cursor: pointer;
+    
+            hr{
+                display: block;
+                text-align: center;
+                width: 20px;
+                color: $project-white;
+                border: 1px solid $project-white;
+            }   
+        }
+    }
+}
+#mobile-overlay{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+main{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    
+    #top{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+
+        .disabled{
+            display: none;
+        }
+
+        #carousel{
+            grid-column: 1/span 3;
+
+            div{
+                width: 100%;
+                height: 100%;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            #slide-1{
+                background-image: url("../images/desktop-image-hero-1.jpg");
+            }
+            #slide-2{
+                background-image: url('../images/desktop-image-hero-2.jpg');
+            }
+            #slide-3{
+                background-image: url('../images/desktop-image-hero-3.jpg');
+            }
+        }
+
+        #right-section{
+            grid-column: 4/span 2;
+            align-self: end;
+
+            #copy-carousel{
+    
+                .slide{
+                    
+                    h1{
+                        padding: 0rem 5rem;
+                        font-size: $h1-heading;
+                        font-weight: $weight-bolder;
+                        line-height: normal;
+                        letter-spacing: -2px;
+                        color: $project-black;
+                        margin-bottom: 18px;
+                        margin-top: 0px;
+                    }
+                    p{
+                        margin-bottom: 2.5rem;
+                        padding: 0rem 4rem 0rem 5rem;
+                    }
+                    a{
+                        padding-left: 5rem;
+                        color: $project-black;
+                        font-size: $p-size;
+                        font-weight: $weight-normal;
+                        line-height: 1rem;
+                        letter-spacing: 12.5px;
+                        text-transform: uppercase;
+                    }
+                    a:hover{
+                        cursor: pointer;
+                        color: $project-light-gray;
+    
+                        svg > path{
+                            fill: $project-light-gray;
+                        }
+                    }     
+                }
+            }
+            #carousel-controls{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                height: 80px;
+                width: 160px;
+                margin-top: 5rem;
+                div{
+                    background-color: $project-black;
+                    width: 80px;
+                    height: 80px;
+                    img{
+                        padding: 1.75rem 2rem;
+                    }
+                }
+                div:hover{
+                    cursor: pointer;
+                    background-color: $project-dark-gray;
+                }
+            }
+        }
+    }
+    #bottom{
+        display: grid;
+        grid-template-columns: 1.5fr 2fr 1.5fr;
+
+        div{
+           
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        #bottom-left{
+            background-image: url("../images/image-about-dark.jpg");
+        }
+        #bottom-right{
+            background-image: url("../images/image-about-light.jpg")
+        }
+
+        #bottom-mid{
+            width: auto;
+            height: auto;
+            text-align: justify;
+            padding-top: 2rem;
+            padding-left: 3rem;
+            padding-right: 3rem;
+
+            h2{
+                padding: 0px;
+                font-size: $p-size;
+                font-weight: $weight-bold;
+                line-height: 22px;
+                letter-spacing: 6.66px;
+                color: $project-black;
+                text-transform: uppercase;
+            }
+        }    
+    }
+}
+
+footer{
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    background-color: $project-dark-gray;
+    color: $project-white;
+    padding: .5rem 0rem;
+
+    a{
+        color: $project-white;
+        text-decoration: none;
+    }
+    a:hover{
+        cursor: pointer;
+        text-decoration: underline;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    #container{
+        height: auto;
+    }
+
+    nav{
+        top: 0px;
+        left:0px;
+        flex-direction: column;
+        width: 100%;
+        height: 7rem;
+        font-size: 14px;
+        overflow: hidden;
+        transition: .5s ease-in-out;
+
+         #nav-brand{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            width: 100%;
+            height: 100%;
+            justify-content: flex-start;
+            align-items: center;
+            
+            #mobile-menu{
+                display: block;
+                padding-left: 1.5rem;
+
+                img:hover{
+                    cursor: pointer;
+                }
+            }
+            #logo{
+                padding-left: 7rem;
+                margin-right: 0rem;
+            }
+         }
+
+         #nav-brand.hide{
+            height: 0%;
+            align-items: flex-end;
+         }
+        
+
+        #menu{
+            
+            width: 100%;
+            height: 0%;
+            color: $project-black;
+
+            #mobile-close{
+                display: block;
+                padding: 0rem 4rem 0rem 1rem;
+
+                img:hover{
+                    cursor: pointer;
+                }
+            }
+            .menu-item:hover{
+                hr{
+                    color: $project-black;
+                    border-color: $project-black;
+                } 
+            }
+        } 
+        #menu.show{
+            animation: moveIn .5s ease-out forwards;
+            position: absolute;
+            align-items: center;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    main{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        
+        #top{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+
+            #carousel{
+                div{
+                    height: 22.5rem;
+                }
+                #slide-1{
+                    background-image: url("../images/mobile-image-hero-1.jpg");
+                }
+                #slide-2{
+                    background-image: url('../images/mobile-image-hero-2.jpg');
+                }
+                #slide-3{
+                    background-image: url('../images/mobile-image-hero-3.jpg');
+                }
+            }
+
+            #right-section{
+                #copy-carousel{
+                    .slide{
+                        padding: 4rem 2rem;
+
+                        h1{
+                            font-size: 2.5rem;
+                            letter-spacing: -1.66px;
+                            margin-bottom: 16px;
+                            padding: 0rem;
+                        }
+                        p{
+                            margin-bottom: 3.5rem;
+                            padding: 0rem;
+                        }
+                        a{
+                            padding-left: 0rem;
+                        }    
+                    }
+                }
+                #carousel-controls{
+                    margin-top: 0rem;
+                    position: absolute;
+                    top: 304px;
+                    right: 0px;
+                    height: 56px;
+                    width: 112px;
+                    
+                    div{
+                        width: 56px;
+                        height: 56px;
+                        
+                        img{
+                            padding: 1.1rem 1.3rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        #bottom{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+
+            #bottom-left{
+                height: 18rem;
+            }
+            #bottom-right{
+                height:18rem;
+            }
+            #bottom-mid{
+                padding: 3rem 2rem;
+                
+                h2{
+                    font-size: 14px;
+                    letter-spacing: 5.83px;
+                }    
+            }
+        }
+    }
+
+    #mobile-overlay{
+        height: auto;
+        transition: .5s ease-in-out;
+    }
+
+    #mobile-overlay.layer {
+        background-color: hsla(0, 0%, 0%, 0.7);
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: .75;
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    footer{
+        font-size: 12px;
+    }
+}
+@keyframes moveIn {
+    0%{
+        height: 25%;
+    }
+    50%{
+        height: 50%;
+    }
+    75%{
+        height: 75%;
+    }
+    100%{
+        height: 100%;
+    }
+}
