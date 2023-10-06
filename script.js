@@ -13,8 +13,6 @@ function moveSlide(event){
         var classAttr = imgSlides[i].getAttribute("class");
         console.log(classAttr.toString());
         if (classAttr.includes("active")) {
-            console.log(classAttr); 
-            console.log(event.target.id);
             if (event.target.id === "right-arrow" && (i+1)<imgSlides.length)
             {
 
