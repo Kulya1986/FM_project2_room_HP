@@ -65,13 +65,20 @@ nav #menu .menu-item {
   padding: 0rem 1rem;
   text-transform: lowercase;
 }
+nav #menu .menu-item a {
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+}
 nav #menu .menu-item hr {
   display: none;
 }
-nav #menu .menu-item:hover {
+nav #menu .menu-item:hover, nav #menu .menu-item:focus {
   cursor: pointer;
 }
-nav #menu .menu-item:hover hr {
+nav #menu .menu-item:hover a, nav #menu .menu-item:focus a {
+  text-decoration: none;
+}
+nav #menu .menu-item:hover hr, nav #menu .menu-item:focus hr {
   display: block;
   text-align: center;
   width: 20px;
@@ -145,6 +152,7 @@ main #top #right-section #copy-carousel .slide a {
   line-height: 1rem;
   letter-spacing: 12.5px;
   text-transform: uppercase;
+  text-decoration: none;
 }
 main #top #right-section #copy-carousel .slide a:hover {
   cursor: pointer;
@@ -161,15 +169,17 @@ main #top #right-section #carousel-controls {
   width: 160px;
   margin-top: 5rem;
 }
-main #top #right-section #carousel-controls div {
+main #top #right-section #carousel-controls button {
+  border: unset;
+  padding-inline: 0;
   background-color: hsl(0, 0%, 0%);
   width: 80px;
   height: 80px;
 }
-main #top #right-section #carousel-controls div img {
+main #top #right-section #carousel-controls button img {
   padding: 1.75rem 2rem;
 }
-main #top #right-section #carousel-controls div:hover {
+main #top #right-section #carousel-controls button:hover, main #top #right-section #carousel-controls button:focus {
   cursor: pointer;
   background-color: hsl(0, 0%, 27%);
 }
@@ -332,11 +342,11 @@ footer a:hover {
     height: 56px;
     width: 112px;
   }
-  main #top #right-section #carousel-controls div {
+  main #top #right-section #carousel-controls button {
     width: 56px;
     height: 56px;
   }
-  main #top #right-section #carousel-controls div img {
+  main #top #right-section #carousel-controls button img {
     padding: 1.1rem 1.3rem;
   }
   main #bottom {
@@ -375,16 +385,10 @@ footer a:hover {
   }
 }
 @keyframes moveIn {
-  0% {
+  from {
     height: 25%;
   }
-  50% {
-    height: 50%;
-  }
-  75% {
-    height: 75%;
-  }
-  100% {
+  to {
     height: 100%;
   }
 }

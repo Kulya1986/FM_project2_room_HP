@@ -23,15 +23,14 @@
             </svg>
           </div>
         </div>
-        
         <div id="menu">
           <div id="mobile-close" onclick="closeMenuMobile()">
             <img src="./src/images/icon-close.svg" alt="">
           </div>
-          <div class="menu-item">Home<hr></div>
-          <div class="menu-item">Shop<hr></div>
-          <div class="menu-item">About<hr></div>
-          <div class="menu-item">Contact<hr></div> 
+          <div class="menu-item"><a href="#">Home</a><hr></div>
+          <div class="menu-item"><a href="#">Shop</a><hr></div>
+          <div class="menu-item"><a href="#">About</a><hr></div>
+          <div class="menu-item"><a href="#">Contact</a><hr></div> 
         </div> 
       </nav>
       <div id="mobile-overlay">
@@ -51,7 +50,7 @@
                       Our experts combine form and function in bringing your vision to life. Create a room in your 
                       own style with our collection and make your property a reflection of you and what you love.
                     </p>
-                    <a>
+                    <a href="#">
                       Shop now
                       <svg width="40" height="12" xmlns="http://www.w3.org/2000/svg">
                         <path d="M34.05 0l5.481 5.527h.008v.008L40 6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668 4.765-4.805H0v-1h38.206l-4.82-4.86L34.05 0z" fill="#000" fill-rule="nonzero"/>
@@ -65,7 +64,7 @@
                       Locally, we’re in most major cities throughout the country. Find the branch nearest you using our 
                       store locator. Any questions? Don't hesitate to contact us today.
                     </p>
-                    <a>
+                    <a href="#">
                       Shop now
                       <svg width="40" height="12" xmlns="http://www.w3.org/2000/svg">
                         <path d="M34.05 0l5.481 5.527h.008v.008L40 6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668 4.765-4.805H0v-1h38.206l-4.82-4.86L34.05 0z" fill="#000" fill-rule="nonzero"/>
@@ -79,7 +78,7 @@
                       to ensure that every product is made as perfect and as consistent as possible. With three decades of 
                       experience in this industry, we understand what customers want for their home and office.
                     </p>
-                    <a>
+                    <a href="#">
                       Shop now
                       <svg width="40" height="12" xmlns="http://www.w3.org/2000/svg">
                         <path d="M34.05 0l5.481 5.527h.008v.008L40 6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668 4.765-4.805H0v-1h38.206l-4.82-4.86L34.05 0z" fill="#000" fill-rule="nonzero"/>
@@ -88,15 +87,14 @@
                   </div>
                 </div>
                 <div id="carousel-controls">
-                  <div onmousedown="moveSlide(event)">
+                  <button  id="left-arrow" onmousedown="moveSlide(event)" onkeydown="triggerMoveSLide(event)">
                     <img id="left-arrow" src="./src/images/icon-angle-left.svg">
-                  </div>
-                  <div onmousedown="moveSlide(event)">
+                  </button>
+                  <button id="right-arrow" onmousedown="moveSlide(event)" onkeydown="triggerMoveSLide(event)">
                     <img id="right-arrow" src="./src/images/icon-angle-right.svg">
-                  </div>
+                  </button>
                 </div>
-            </div>
-            
+            </div>  
           </section>
           <section id="bottom">
             <div id="bottom-left">
@@ -121,7 +119,6 @@
           Coded by &nbsp;<a href="https://github.com/Kulya1986">Nataliia Kulyk</a>.
         </footer>
       </div>
-
   </div>
   <script src="./script.js"></script>
 </body>

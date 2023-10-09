@@ -71,14 +71,23 @@ nav{
         .menu-item{
             padding: 0rem 1rem;
             text-transform: lowercase;
+
+            a{
+                color: $project-white;
+                text-decoration: none;
+            }
     
             hr{
                 display: none;
             }
         }
-        .menu-item:hover{
+        .menu-item:hover, .menu-item:focus{
             cursor: pointer;
-    
+
+            a{
+                text-decoration: none;
+            }
+
             hr{
                 display: block;
                 text-align: center;
@@ -161,6 +170,7 @@ main{
                         line-height: 1rem;
                         letter-spacing: 12.5px;
                         text-transform: uppercase;
+                        text-decoration: none;
                     }
                     a:hover{
                         cursor: pointer;
@@ -179,7 +189,9 @@ main{
                 height: 80px;
                 width: 160px;
                 margin-top: 5rem;
-                div{
+                button{
+                    border: unset;
+                    padding-inline: 0;
                     background-color: $project-black;
                     width: 80px;
                     height: 80px;
@@ -187,7 +199,7 @@ main{
                         padding: 1.75rem 2rem;
                     }
                 }
-                div:hover{
+                button:hover, button:focus{
                     cursor: pointer;
                     background-color: $project-dark-gray;
                 }
@@ -381,7 +393,7 @@ footer{
                     height: 56px;
                     width: 112px;
                     
-                    div{
+                    button{
                         width: 56px;
                         height: 56px;
                         
@@ -435,16 +447,18 @@ footer{
     }
 }
 @keyframes moveIn {
-    0%{
-        height: 25%;
-    }
-    50%{
-        height: 50%;
-    }
-    75%{
-        height: 75%;
-    }
-    100%{
-        height: 100%;
-    }
+    from{height: 25%;}
+    to{height:100%}
+    // 0%{
+    //     height: 25%;
+    // }
+    // 50%{
+    //     height: 50%;
+    // }
+    // 75%{
+    //     height: 75%;
+    // }
+    // 100%{
+    //     height: 100%;
+    // }
 }
