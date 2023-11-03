@@ -44,7 +44,7 @@ function moveSlide(event){
                 copySlides[i-1].classList.remove("disabled");
                 copySlides[i-1].classList.add("active");
                 break
-            }else if ((event.target.id === "left-arrow" || event.target.id === "left-arrow") && (i-1)<0){
+            }else if ((event.target.id === "left-arrow" || event.target.id === "left-arrow-img") && (i-1)<0){
                 imgSlides[i].classList.remove("active");
                 imgSlides[i].classList.add("disabled");
                 imgSlides[2].classList.remove("disabled");
