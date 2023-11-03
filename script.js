@@ -12,7 +12,7 @@ function moveSlide(event){
         var classAttr = imgSlides[i].getAttribute("class");
         
         if (classAttr.includes("active")) {
-            if (event.target.id === "right-arrow" && (i+1)<imgSlides.length)
+            if ((event.target.id === "right-arrow" || event.target.id === "right-arrow-img") && (i+1)<imgSlides.length)
             {
 
                 imgSlides[i].classList.remove("active");
@@ -24,7 +24,7 @@ function moveSlide(event){
                 copySlides[i+1].classList.remove("disabled");
                 copySlides[i+1].classList.add("active");
                 break;
-            }else if (event.target.id === "right-arrow" && (i+1)===imgSlides.length){
+            }else if ((event.target.id === "right-arrow" || event.target.id === "right-arrow-img") && (i+1)===imgSlides.length){
                 imgSlides[i].classList.remove("active");
                 imgSlides[i].classList.add("disabled");
                 imgSlides[0].classList.remove("disabled");
@@ -34,7 +34,7 @@ function moveSlide(event){
                 copySlides[0].classList.remove("disabled");
                 copySlides[0].classList.add("active");
                 break;
-            }else if (event.target.id === "left-arrow" && (i-1)>=0){
+            }else if ((event.target.id === "left-arrow" || event.target.id === "left-arrow-img") && (i-1)>=0){
                 imgSlides[i].classList.remove("active");
                 imgSlides[i].classList.add("disabled");
                 imgSlides[i-1].classList.remove("disabled");
@@ -44,7 +44,7 @@ function moveSlide(event){
                 copySlides[i-1].classList.remove("disabled");
                 copySlides[i-1].classList.add("active");
                 break
-            }else if (event.target.id === "left-arrow" && (i-1)<0){
+            }else if ((event.target.id === "left-arrow" || event.target.id === "left-arrow") && (i-1)<0){
                 imgSlides[i].classList.remove("active");
                 imgSlides[i].classList.add("disabled");
                 imgSlides[2].classList.remove("disabled");
